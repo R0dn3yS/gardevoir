@@ -33,6 +33,10 @@ client.once('ready', () => {
   });
 });
 
+client.on('guildMemberAdd', async member => {
+  member.roles.add('1134843356921479168');
+});
+
 client.on('messageCreate', async message => {
   if (message.author.bot) return;
   if (!message.guild) return;
